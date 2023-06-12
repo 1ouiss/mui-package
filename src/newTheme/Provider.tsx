@@ -1,21 +1,23 @@
+import React from "react";
 import { ThemeProvider } from "@mui/material";
 
 // import useTheme from '@/store/theme';
 
-import { newTheme } from "./theme";
+import { newTheme, tokens } from "./theme";
 
 type CustomThemeProviderProps = {
   children: JSX.Element;
+  mode: keyof typeof tokens;
 };
 // declare module "@mui/material/styles" {
 //   interface Theme {
 //     palette: defaultTheme("ade");
 // }
 
-function CustomThemeProvider({ children }: CustomThemeProviderProps) {
+function CustomThemeProvider({ children, mode }: CustomThemeProviderProps) {
   // const [theme] = useTheme();
 
-  return <ThemeProvider theme={newTheme("ade")}>{children}</ThemeProvider>;
+  return <ThemeProvider theme={newTheme(mode)}>{children}</ThemeProvider>;
 }
 
 export default CustomThemeProvider;

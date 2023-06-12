@@ -1,9 +1,7 @@
 import { SimplePaletteColorOptions } from "@mui/material";
 import { tokens } from "../theme";
-import {
-  ColorPartial,
-  TypeBackground,
-} from "@mui/material/styles/createPalette";
+import { ColorPartial, TypeBackground } from '@mui/material/styles/createPalette';
+
 
 type SubObjectKeys = keyof Palette;
 
@@ -16,20 +14,20 @@ type SubObjectsTonalOffset = keyof PaletteOffset[SubObjectKeys];
 
 type AllColor = MergeSubObjects | SubObjectsCustomPalette | SubObjectsTonalOffset;
 
-interface Color extends SimplePaletteColorOptions {
+type NewColor = {
   A10?: string;
   A20?: string;
-}
+} & SimplePaletteColorOptions;
 
 type Palette = {
   [key in keyof typeof tokens]: {
-    [color in keyof (typeof tokens)[key]["palette"]]: Color;
+    [color in keyof (typeof tokens)[key]["palette"]]: NewColor;
   };
 };
 
 type PaletteCustom = {
   [key in keyof typeof tokens]: {
-    [color in keyof (typeof tokens)[key]["customPalette"]]: Color;
+    [color in keyof (typeof tokens)[key]["customPalette"]]: NewColor;
   };
 };
 
@@ -39,9 +37,9 @@ type PaletteOffset = {
   };
 };
 
-interface BackgroundType extends TypeBackground {
+type BackgroundType = {
   surface1?: string;
-}
+} & TypeBackground;
 
 type PaletteBackground = {
   [key in keyof typeof tokens]: {
@@ -53,7 +51,7 @@ type CombinedPalette = {
   [key in keyof typeof tokens]: {
     [color in
       | keyof (typeof tokens)[key]["palette"]
-      | keyof (typeof tokens)[key]["customPalette"]]: Color;
+      | keyof (typeof tokens)[key]["customPalette"]]: NewColor;
   } & {
     [color in keyof (typeof tokens)[key]["tonalOffset"]]: ColorPartial;
   } & {

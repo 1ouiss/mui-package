@@ -4,8 +4,8 @@ import { frFR as gridfrFR } from '@mui/x-data-grid';
 import { frFR } from '@mui/x-date-pickers';
 import { frFR as pickersfrFR } from '@mui/x-date-pickers';
 
-import tokenADE from '../../tokens-ade.json';
-import tokenESP from '../../tokens-esp.json';
+import tokenADE from '../tokens/tokens-ade.json';
+import tokenESP from '../tokens/tokens-esp.json';
 import components from './Components/components';
 import createNewPalette from './Palette/createPalette';
 import { CombinedPalette } from './Palette/utils';

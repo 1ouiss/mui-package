@@ -2,17 +2,35 @@
   "name": "mui-theme-package",
   "version": "1.0.0",
   "description": "Package for transform design token ade in mui theme",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "author": "",
   "license": "ISC",
+  "exports": {
+    ".": {
+      "import": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      }
+    }
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p ./configs/tsconfig.esm.json"
+  },
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.13.4",
     "@mui/x-data-grid": "^6.7.0",
-    "@mui/x-date-pickers": "^6.7.0"
+    "@mui/x-date-pickers": "^6.7.0",
+    "tsx": "^3.12.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.0",
+    "typescript": "^5.1.3"
   }
 }
