@@ -9,6 +9,15 @@
   "publishConfig": {
     "@1ouiss:registry": "https://npm.pkg.github.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1ouiss/mui-package"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
   "exports": {
     ".": {
       "import": {
