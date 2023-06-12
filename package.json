@@ -6,6 +6,9 @@
   "types": "./lib/index.d.ts",
   "author": "",
   "license": "ISC",
+  "publishConfig": {
+    "@1ouiss:registry": "https://npm.pkg.github.com"
+  },
   "exports": {
     ".": {
       "import": {
