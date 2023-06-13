@@ -2,40 +2,18 @@
 
 This new theme is designed to have different mode (ade, esd, esp, eac...)
 
-## Structure
+## Installation
+
+### With `yarn`
 
 ```bash
-├── src/newTheme
-│   ├── theme.ts
-│   ├── types.ts
-│   ├── Provider.tsx
-│   ├── Components
-│   │   ├── component.ts
-│   │   ├── dataDisplay.ts
-│   │   ├── global.ts
-│   │   ├── inputs.ts
-│   │   ├── layout.ts
-│   ├── Palette
-│   │   ├── createPalette.ts
-│   │   ├── utils.ts
-│   ├── Typography
-│   │   ├── createTypography.ts
-│   │   ├── typographyImports.ts
-│   │   ├── utils.ts
-│
-│   ├── README.md
+$ yarn add @1ouiss/mui-theme-package @mui/material @emotion/react @emotion/styled
 ```
 
-## Create `Themes` type in `src/newTheme/types.ts`
+### With `npm`
 
-This type is used to create the different mode of the theme, if you want add new mode, mode here for use in app.
-
-```ts
-enum Themes {
-  ADE = 'ade',
-  ESP = 'esp',
-  // add new mode
-}
+```bash
+$ npm install @1ouiss/mui-theme-package @mui/material @emotion/react @emotion/styled
 ```
 
 ## How to use it
@@ -45,44 +23,20 @@ enum Themes {
 To use the theme you need to import the provider and wrap your app with it.
 
 ```tsx
-import { useTheme } from '@store/theme';
-
-function CustomThemeProvider({ children }: CustomThemeProviderProps) {
-  // get theme from store
-  const [theme] = useTheme();
-
-  // here you can change the theme
-  return <ThemeProvider theme={newTheme(theme)}>{children}</ThemeProvider>;
-}
-```
-
-### Import theme in your app
-
-```tsx
-import { CustomThemeProvider } from 'src/newTheme/Provider';
+import { CustomThemeProvider } from "@1ouiss/mui-theme-package";
 
 const App = () => {
   return (
-    <CustomThemeProvider>
+    <CustomThemeProvider mode="ade">
       <div>My app</div>
     </CustomThemeProvider>
   );
 };
 ```
 
-### Declare new color in your component
+### Theme you can use with this package
 
-If you want use a new color in your component, you can declare new color for your component in file `src/nexTheme/theme.ts`
-
-```tsx
-// create ovverides style for your component
-declare module '@mui/material/Button' {
-  interface ButtonPropsColorOverrides {
-    // declare new color here
-    color1: true;
-  }
-}
-```
+ADE | ESP
 
 ### Use the theme in your component
 
@@ -90,7 +44,7 @@ To use the theme in your component mui component
 
 ```tsx
 // import mui component
-import { Button } from '@mui/material';
+import { Button } from "@mui/material";
 
 const MyComponent = () => {
   // use theme here
@@ -104,14 +58,14 @@ To use the theme in your component with sx
 
 ```tsx
 // import mui component
-import { Button } from '@mui/material';
+import { Button } from "@mui/material";
 
 const MyComponent = () => {
   return (
     <Button
       sx={{
         // use theme here
-        color: 'color1',
+        color: "color1",
       }}
     >
       My component
@@ -126,7 +80,7 @@ To use the theme in your component you need to import the hook `useTheme` and us
 
 ```tsx
 // import useTheme from mui
-import { useTheme } from '@mui/material';
+import { useTheme } from "@mui/material";
 
 const MyComponent = () => {
   // create theme const for use it
@@ -151,7 +105,7 @@ To use the theme in your component you need to import the hook `useTheme` and us
 
 ```tsx
 // import useTheme from mui
-import { Theme, useTheme } from '@mui/material';
+import { Theme, useTheme } from "@mui/material";
 
 const MyComponent = () => {
   // create theme const for use it
@@ -173,4 +127,4 @@ const MyComponent = () => {
 
 ## `StyledTabs` & `StyledTab`
 
-Components `StyledTabs` & `StyledTab` are remplaced by `MuiTabs` & `MuiTab` in `src/StyledTabs/index.ts`
+Components `StyledTabs` & `StyledTab` doesn't exist now use `Tabs` & `Tab` from `@mui/material` and it's automatically styled with the theme.
