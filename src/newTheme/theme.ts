@@ -6,6 +6,7 @@ import { frFR as pickersfrFR } from '@mui/x-date-pickers';
 
 import tokenADE from '../tokens/tokens-ade.json';
 import tokenESP from '../tokens/tokens-esp.json';
+import tokenADEDark from '../tokens/tokens-ade-dark.json';
 import components from './Components/components';
 import createNewPalette from './Palette/createPalette';
 import { CombinedPalette } from './Palette/utils';
@@ -14,6 +15,7 @@ import createNewTypography from './Typography/createTypography';
 export const tokens = {
   esp: tokenESP.theme,
   ade: tokenADE.theme,
+  adeDark: tokenADEDark.theme,
 };
 
 declare module '@mui/material/styles' {
