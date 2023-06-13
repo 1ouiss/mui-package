@@ -17,6 +17,6 @@
       // },
       "resolveJsonModule": true,
     },
-    "include": ["../src/**/*", "typings.d.ts"],
+    "include": ["../src/**/*", "typings.d.ts", "src/fonts/**/*"],
     "files": ["../src/index.ts"]
   }
