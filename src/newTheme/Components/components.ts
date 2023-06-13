@@ -1,7 +1,7 @@
 import { OverridesStyleRules } from '@mui/material/styles/overrides';
 
 import { CombinedPalette, SubObjectKeys } from '../Palette/utils';
-// import typographyImports from '../Typography/typographyImports';
+import typographyImports from '../Typography/typographyImports';
 import { SubObjectKeysTypography, TypographyMerge } from '../Typography/utils';
 import dataDisplay from './dataDisplay';
 import globals from './globals';
@@ -15,9 +15,9 @@ export type Props = {
 
 const components = ({ palette, typography }: Props): OverridesStyleRules => {
   return {
-    // MuiCssBaseline: {
-    //   styleOverrides: typographyImports,
-    // },
+    MuiCssBaseline: {
+      styleOverrides: typographyImports,
+    },
     ...inputs({ palette, typography }),
     ...dataDisplay({ palette, typography }),
     ...layout({ palette, typography }),

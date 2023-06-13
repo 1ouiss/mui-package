@@ -1,14 +1,11 @@
 {
   "name": "@1ouiss/mui-theme-package",
-  "version": "0.0.2",
+  "version": "0.0.7",
   "description": "Package for transform design token ade in mui theme",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "author": "@1ouiss",
   "license": "ISC",
-  "publishConfig": {
-    "@1ouiss:registry": "https://npm.pkg.github.com"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/1ouiss/mui-package"

@@ -15,7 +15,8 @@
       // "paths": {
       //   "@/*": ["src/*"]
       // },
-      "resolveJsonModule": true
+      "resolveJsonModule": true,
     },
+    "include": ["../src/**/*", "typings.d.ts"],
     "files": ["../src/index.ts"]
   }
