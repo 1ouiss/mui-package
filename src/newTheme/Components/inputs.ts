@@ -273,6 +273,9 @@ const inputs = ({ palette, typography }: Props): OverridesStyleRules => ({
         // "&:hover .MuiFormLabel-root": {
         //   color: palette?.primary.main,
         // },
+        "& .MuiInputBase-root .MuiAutocomplete-endAdornment .MuiIconButton-root svg": {
+          color: palette?.grey[400],
+        },
         "& .MuiAutocomplete-popupIndicatorOpen": {
           color: palette?.primary.main,
         },

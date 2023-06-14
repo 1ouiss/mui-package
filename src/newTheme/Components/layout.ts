@@ -56,7 +56,7 @@ export const layout = ({ palette, typography }: Props): OverridesStyleRules => (
           },
         },
         '& .MuiDataGrid-row': {
-          backgroundColor: 'white',
+          backgroundColor: palette?.background.paper,
           '&:hover': {
             backgroundColor: palette?.grey[800],
           },
@@ -108,6 +108,42 @@ export const layout = ({ palette, typography }: Props): OverridesStyleRules => (
         '& .MuiDataGrid-overlay': {
           color: palette?.grey[400],
         },
+        '& .MuiDataGrid-columnHeader': {
+          '&:hover': {
+            "& .MuiDataGrid-columnHeaderDraggableContainer": {
+              '& .MuiDataGrid-menuIcon': {
+                '& .MuiButtonBase-root': {
+                  '& .MuiSvgIcon-root': {
+                    color: palette?.grey[500],
+                  },
+                },
+              },
+              '& .MuiDataGrid-columnHeaderTitleContainer': {
+                '& .MuiDataGrid-iconButtonContainer': {
+                  '& .MuiButtonBase-root': {
+                    '& .MuiSvgIcon-root': {
+                      color: palette?.grey[500],
+                    },
+                  },
+                },
+              },
+            },
+            '& .MuiDataGrid-columnSeparator': {
+              '& .MuiSvgIcon-root': {
+                color: palette?.grey[500],
+              },
+            },
+          },
+          '& .MuiDataGrid-columnHeaderTitleContainer': {
+            '& .MuiDataGrid-iconButtonContainer': {
+              '& .MuiButtonBase-root': {
+                '& .MuiSvgIcon-root': {
+                  color: palette?.grey[500],
+                },
+              },
+            },
+          }
+        }
       },
     },
   },
