@@ -94,9 +94,9 @@ const inputs = ({ palette, typography }: Props): OverridesStyleRules => ({
           },
         },
         '&.primary': {
-          backgroundColor: palette?.grey[800] + ' !important',
+          backgroundColor: palette?.grey[900] + ' !important',
           '& .MuiSvgIcon-root': {
-            color: palette?.grey[300] + ' !important',
+            color: palette?.grey[500] + ' !important',
           },
           '&:hover': {
             backgroundColor: palette?.primary.light + ' !important',
