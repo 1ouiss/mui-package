@@ -313,8 +313,6 @@ export const layout = ({ palette, typography }: Props): OverridesStyleRules => (
           width: '270px',
           '& .MuiDrawer-paper': {
             backgroundColor: palette?.background.surface1,
-            maxWidth: '270px',
-            width: '270px',
             color: 'grey.100',
             padding: '30px 20px',
             display: 'flex',
