@@ -10,7 +10,8 @@ export interface MuiIconButtonProps extends Omit<IconButtonProps, MuiOmits> {
     | "outlined"
     | "error"
     | "success"
-    | "secondary";
+    | "secondary"
+    | "delete";
 }
 
 export const MuiIconButton = ({

@@ -67,60 +67,98 @@ const inputs = ({ palette, typography }: Props): OverridesStyleRules => ({
   MuiIconButton: {
     styleOverrides: {
       root: {
-        "&.primary": {
-          backgroundColor: palette?.grey[900] + " !important",
-          "&:hover": {
-            backgroundColor: palette?.primary.main + " !important",
-            "& .MuiSvgIcon-root": {
-              color: palette?.background.default + " !important",
+        '&.MuiIconButton-sizeSmall': {
+          padding: '6px',
+          '& .MuiSvgIcon-root': {
+            width: '16px',
+            height: '16px',
+          },
+        },
+        '&.MuiIconButton-sizeMedium': {
+          padding: '8px',
+          '& .MuiSvgIcon-root': {
+            width: '18px',
+            height: '18px',
+          },
+        },
+        '&.secondary': {
+          backgroundColor: palette?.secondaryBase[900] + ' !important',
+          '& .MuiSvgIcon-root': {
+            color: palette?.secondaryBase[300] + ' !important',
+          },
+          '&:hover': {
+            backgroundColor: palette?.primary.light + ' !important',
+            '& .MuiSvgIcon-root': {
+              color: palette?.background.default + ' !important',
             },
           },
         },
-        "&.grey": {
-          "&:hover": {
-            backgroundColor: palette?.grey[900] + " !important",
+        '&.primary': {
+          backgroundColor: palette?.grey[800] + ' !important',
+          '& .MuiSvgIcon-root': {
+            color: palette?.grey[300] + ' !important',
           },
-        },
-        "&.action": {
-          "&:hover": {
-            backgroundColor: palette?.primary.A10 + " !important",
-            "& .MuiSvgIcon-root": {
-              color: palette?.primary.light + " !important",
+          '&:hover': {
+            backgroundColor: palette?.primary.light + ' !important',
+            '& .MuiSvgIcon-root': {
+              color: palette?.primary.contrastText + ' !important',
+            },
+            '& .MuiCircularProgress-root': {
+              color: palette?.primary.contrastText + ' !important',
             },
           },
         },
-        "&.outlined": {
-          border: "1px solid " + palette?.background.paper + " !important",
-          "& .MuiSvgIcon-root": {
-            color: palette?.background.paper + " !important",
+        '&.grey': {
+          '& .MuiSvgIcon-root': {
+            color: palette?.grey[300] + ' !important',
           },
-          "&:hover": {
-            backgroundColor: palette?.background.paper + " !important",
-            "& .MuiSvgIcon-root": {
-              color: palette?.color1.contrastText + " !important",
+          '&:hover': {
+            backgroundColor: palette?.grey[800] + ' !important',
+          },
+        },
+        '&.action': {
+          '& .MuiSvgIcon-root': {
+            color: palette?.grey[300] + ' !important',
+          },
+          '&:hover': {
+            backgroundColor: palette?.primary.A10 + ' !important',
+            '& .MuiSvgIcon-root': {
+              color: palette?.primary.light + ' !important',
             },
           },
         },
-        "&.error": {
-          backgroundColor: palette?.error.main + " !important",
-          "& .MuiSvgIcon-root": {
-            color: palette?.error.contrastText + " !important",
+        '&.outlined': {
+          border: '1px solid ' + palette?.background.paper + ' !important',
+          '& .MuiSvgIcon-root': {
+            color: palette?.background.paper + ' !important',
+          },
+          '&:hover': {
+            backgroundColor: palette?.background.paper + ' !important',
+            '& .MuiSvgIcon-root': {
+              color: palette?.color1.contrastText + ' !important',
+            },
           },
         },
-        "&.success": {
-          backgroundColor: palette?.success.main + " !important",
-          "& .MuiSvgIcon-root": {
-            color: palette?.success.contrastText + " !important",
+        '&.error': {
+          backgroundColor: palette?.error.main + ' !important',
+          '& .MuiSvgIcon-root': {
+            color: palette?.error.contrastText + ' !important',
           },
         },
-        "&.delete": {
-          "&:hover": {
-            backgroundColor: palette?.error.A10 + " !important",
-            "& .MuiSvgIcon-root": {
-              color: palette?.error.main + " !important",
-            }
-          }
-        }
+        '&.success': {
+          backgroundColor: palette?.success.main + ' !important',
+          '& .MuiSvgIcon-root': {
+            color: palette?.success.contrastText + ' !important',
+          },
+        },
+        '&.delete': {
+          '&:hover': {
+            backgroundColor: palette?.error.A10 + ' !important',
+            '& .MuiSvgIcon-root': {
+              color: palette?.error.main + ' !important',
+            },
+          },
+        },
       },
     },
   },

@@ -92,6 +92,7 @@ export const newTheme = (mode: keyof typeof tokens) => {
       components: components({
         palette: customPalette,
         typography: customTypography,
+        
       }),
     },
     gridfrFR,
