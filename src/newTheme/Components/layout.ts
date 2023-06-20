@@ -243,7 +243,13 @@ export const layout = ({ palette, typography }: Props): OverridesStyleRules => (
           borderColor: palette?.grey[700],
           borderRadius: '7px',
           margin: '1px',
-          '&:hover': {
+          '&.disabled': {
+            borderColor: palette?.grey[800],
+            "&:hover": {
+              borderColor: palette?.grey[800],
+            }
+          },
+          '&:hover:not(.disabled)': {
             borderColor: palette?.primary.main + ' !important',
           },
           '&:focus-within': {
@@ -264,6 +270,9 @@ export const layout = ({ palette, typography }: Props): OverridesStyleRules => (
                 border: 'none',
               },
             },
+            '&:disabled': {
+              color: palette?.grey[700],
+            }
           },
           '& .flag-dropdown': {
             border: 'none',

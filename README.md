@@ -128,3 +128,24 @@ const MyComponent = () => {
 ## `StyledTabs` & `StyledTab`
 
 Components `StyledTabs` & `StyledTab` doesn't exist now use `Tabs` & `Tab` from `@mui/material` and it's automatically styled with the theme.
+
+## Input phone disabled
+
+If you want to disable the input phone you need to add className `disabled` and disabled properties to the component `PhoneInput`.
+
+```tsx
+const CustomInputPhone = ({ ...rest }: PhoneInputProps) => {
+  return (
+    <>
+      <Grid container spacing={2}>
+        <InputLabel>
+          <Label field={field} />
+        </InputLabel>
+        <PhoneInput containerClass={"disabled"} disabled={true} {...rest} />
+      </Grid>
+    </>
+  );
+};
+
+export default CustomInputPhone;
+```

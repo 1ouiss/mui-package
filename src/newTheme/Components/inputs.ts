@@ -208,11 +208,6 @@ const inputs = ({ palette, typography }: Props): OverridesStyleRules => ({
           },
         }
       },
-      input: {
-        "&.Mui-disabled": {
-          color: "red !important",
-        },
-      }
     },
   },
   MuiCheckbox: {
