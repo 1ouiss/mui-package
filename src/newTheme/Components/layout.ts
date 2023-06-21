@@ -269,6 +269,7 @@ export const layout = ({ palette, typography }: Props): OverridesStyleRules => (
               background: 'none',
               '&:focus': {
                 border: 'none',
+                background: 'none',
               },
             },
             '&:disabled': {
