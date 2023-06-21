@@ -285,6 +285,17 @@ const inputs = ({ palette, typography }: Props): OverridesStyleRules => ({
               height: "auto",
             },
           },
+          "& .MuiAutocomplete-endAdornment": {
+            "& .MuiIconButton-root": {
+              padding: 0,
+              width: 24,
+              height: 24,
+              "& .MuiSvgIcon-root": {
+                width: 24,
+                height: 24,
+              }
+            },
+          }
         },
         "&:hover": {
           "& .MuiFormControl-root": {
