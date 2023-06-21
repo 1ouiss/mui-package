@@ -31,9 +31,8 @@ const CustomInputPhone = ({ ...rest }: PhoneInputProps) => {
           inputProps={{
             name: field.id,
           }}
-          containerClass={"disabled"}
+          inputClass="invalid-number"
           placeholder="ex : +33 6 44 55 66 77"
-          disabled={true}
           inputStyle={{}}
           {...rest}
         />

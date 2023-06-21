@@ -266,6 +266,7 @@ export const layout = ({ palette, typography }: Props): OverridesStyleRules => (
             border: 'none',
             '&.invalid-number': {
               border: 'none',
+              background: 'none',
               '&:focus': {
                 border: 'none',
               },

@@ -1,6 +1,6 @@
 {
   "name": "@1ouiss/mui-theme-package",
-  "version": "0.0.24",
+  "version": "1.0.0",
   "description": "Package for transform design token ade in mui theme",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
