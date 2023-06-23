@@ -4,18 +4,15 @@ import { frFR as gridfrFR } from '@mui/x-data-grid';
 import { frFR } from '@mui/x-date-pickers';
 import { frFR as pickersfrFR } from '@mui/x-date-pickers';
 
-import tokenADE from '../tokens/tokens-ade.json';
-import tokenESP from '../tokens/tokens-esp.json';
-import tokenADEDark from '../tokens/tokens-ade-dark.json';
+import themeTokens from '../tokens/tokens.json';
 import components from './Components/components';
 import createNewPalette from './Palette/createPalette';
 import { CombinedPalette } from './Palette/utils';
 import createNewTypography from './Typography/createTypography';
 
 export const tokens = {
-  esp: tokenESP.theme,
-  ade: tokenADE.theme,
-  adeDark: tokenADEDark.theme,
+  esp: themeTokens.themes.esp,
+  ade: themeTokens.themes.ade,
 };
 
 declare module '@mui/material/styles' {
